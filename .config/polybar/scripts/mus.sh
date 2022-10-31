@@ -19,12 +19,12 @@
 	 # echo -n "Offline" 
 # else
 
-cmusOutput=$(cmus-meta)
+cmusOutput=$(player-meta)
 
 if [[ $cmusOutput == *Offline* ]]; then
   echo Offline
 else
-  if [[ $(mus-status) == *Playing* ]]; then
+  if [[ $(player-status) == *Playing* ]]; then
     echo " $cmusOutput"
   else 
     echo " $cmusOutput"
